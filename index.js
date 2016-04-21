@@ -6,7 +6,7 @@
 
 'use strict';
 
-module.exports = function() {
+(function() {
     if (!Array.prototype.filter) {
         Array.prototype.filter = function(fun/*, thisArg*/) {
             'use strict';
@@ -41,5 +41,4 @@ module.exports = function() {
             return res;
         };
     }
-}();
-
+})();
