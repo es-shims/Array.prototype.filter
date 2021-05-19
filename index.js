@@ -1,44 +1,25 @@
-/**
- * Array.prototype.filter() - Polyfill
- *
- * @ref https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
- */
-
 'use strict';
 
-(function() {
-    if (!Array.prototype.filter) {
-        Array.prototype.filter = function(fun/*, thisArg*/) {
-            'use strict';
+var define = require('define-properties');
+var RequireObjectCoercible = require('es-abstract/2020/RequireObjectCoercible');
+var callBound = require('call-bind/callBound');
 
-            if (this === void 0 || this === null) {
-                throw new TypeError();
-            }
+var implementation = require('./implementation');
+var getPolyfill = require('./polyfill');
+var polyfill = getPolyfill();
+var shim = require('./shim');
 
-            var t = Object(this);
-            var len = t.length >>> 0;
-            if (typeof fun !== 'function') {
-                throw new TypeError();
-            }
+var $slice = callBound('Array.prototype.slice');
 
-            var res = [];
-            var thisArg = arguments.length >= 2 ? arguments[1] : void 0;
-            for (var i = 0; i < len; i++) {
-                if (i in t) {
-                    var val = t[i];
+// eslint-disable-next-line no-unused-vars
+var bound = function filter(array, callbackfn) {
+	RequireObjectCoercible(array);
+	return polyfill.apply(array, $slice(arguments, 1));
+};
+define(bound, {
+	getPolyfill: getPolyfill,
+	implementation: implementation,
+	shim: shim
+});
 
-                    // NOTE: Technically this should Object.defineProperty at
-                    //       the next index, as push can be affected by
-                    //       properties on Object.prototype and Array.prototype.
-                    //       But that method's new, and collisions should be
-                    //       rare, so use the more-compatible alternative.
-                    if (fun.call(thisArg, val, i, t)) {
-                        res.push(val);
-                    }
-                }
-            }
-
-            return res;
-        };
-    }
-})();
+module.exports = bound;

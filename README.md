@@ -1,17 +1,60 @@
-# ES6 `Array.prototype.filter` polyfill
+# array.prototype.filter <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
-## Installation
-* `npm install array.prototype.filter`
+[![dependency status][deps-svg]][deps-url]
+[![dev dependency status][dev-deps-svg]][dev-deps-url]
+[![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
 
-## Usage
-* Coming soon...
+[![npm badge][npm-badge-png]][package-url]
 
-## License
-The MIT License (MIT)
-Copyright (c) 2016 Ryan Hefner [https://www.ryanhefner.com](https://www.ryanhefner.com)
+An ES5 spec-compliant `Array.prototype.filter` shim/polyfill/replacement that works as far down as ES3.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](https://www.ecma-international.org/ecma-262/5.1/).
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Because `Array.prototype.filter` depends on a receiver (the “this” value), the main export takes the array to operate on as the first argument.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## Example
+
+```js
+var filter = require('array.prototype.filter');
+var assert = require('assert');
+
+assert.deepEqual(filter([1, 2, 3], function (x) { return x >= 2; }), [2, 3]);
+assert.deepEqual(filter([1, 2, 3], function (x) { return x <= 2; }), [1, 2]);
+```
+
+```js
+var filter = require('array.prototype.filter');
+var assert = require('assert');
+/* when Array#filter is not present */
+delete Array.prototype.filter;
+var shimmedFilter = filter.shim();
+assert.equal(shimmedFilter, filter.getPolyfill());
+var arr = [1, 2, 3];
+var isOdd = function (x) { return x % 2 !== 0; };
+assert.deepEqual(arr.filter(isOdd), filter(arr, isOdd));
+```
+
+```js
+var filter = require('array.prototype.filter');
+var assert = require('assert');
+/* when Array#filter is present */
+var shimmedFilter = filter.shim();
+assert.equal(shimmedFilter, Array.prototype.filter);
+assert.deepEqual(arr.filter(isOdd), filter(arr, isOdd));
+```
+
+## Tests
+Simply clone the repo, `npm install`, and run `npm test`
+
+[package-url]: https://npmjs.org/package/array.prototype.filter
+[npm-version-svg]: https://versionbadg.es/es-shims/Array.prototype.filter.svg
+[deps-svg]: https://david-dm.org/es-shims/Array.prototype.filter.svg
+[deps-url]: https://david-dm.org/es-shims/Array.prototype.filter
+[dev-deps-svg]: https://david-dm.org/es-shims/Array.prototype.filter/dev-status.svg
+[dev-deps-url]: https://david-dm.org/es-shims/Array.prototype.filter#info=devDependencies
+[npm-badge-png]: https://nodei.co/npm/array.prototype.filter.png?downloads=true&stars=true
+[license-image]: https://img.shields.io/npm/l/array.prototype.filter.svg
+[license-url]: LICENSE
+[downloads-image]: https://img.shields.io/npm/dm/array.prototype.filter.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=array.prototype.filter
