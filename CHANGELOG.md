@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.1](https://github.com/es-shims/Array.prototype.filter/compare/v1.0.0...v1.0.1) - 2021-10-01
+
+### Commits
+
+- [Deps] update `es-abstract`, `is-string` [`67c3b80`](https://github.com/es-shims/Array.prototype.filter/commit/67c3b80370becc8a6ea305c14a2cd854f14397a4)
+- [meta] create `FUNDING.yml` [`28f7bab`](https://github.com/es-shims/Array.prototype.filter/commit/28f7babb4c27e1a46661e963df9d9e56554840c9)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `@es-shims/api`, `tape` [`7cf790f`](https://github.com/es-shims/Array.prototype.filter/commit/7cf790fce0e3e8d39da5fd7aa33269ebc46bc96e)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog` [`69b353d`](https://github.com/es-shims/Array.prototype.filter/commit/69b353d9e65c4ddc32a4dd080b8318c603615e3d)
+- [actions] update workflows [`90d81c0`](https://github.com/es-shims/Array.prototype.filter/commit/90d81c06d1435cdc4affe40a0cd0e12054dac280)
+- [readme] add actions and codecov badges [`64bad69`](https://github.com/es-shims/Array.prototype.filter/commit/64bad69903d684f4bfa6ad4e9f288e43f30da10c)
+- [Robustness] use `callBind.apply` [`024c848`](https://github.com/es-shims/Array.prototype.filter/commit/024c848e20d6cbf6bd5d12d84a7512965f07de11)
+- [meta] clean up scripts [`dd96d69`](https://github.com/es-shims/Array.prototype.filter/commit/dd96d691d553ed179d1793424e2df63944191a99)
+- [Deps] update `es-abstract`, `is-string` [`a1a7cb0`](https://github.com/es-shims/Array.prototype.filter/commit/a1a7cb0b5dd9bd2bfe08d0eee2c58373d71c3cc0)
+
 ## [v1.0.0](https://github.com/es-shims/Array.prototype.filter/compare/v0.1.1...v1.0.0) - 2021-05-18
 
 ### Commits
