@@ -6,8 +6,6 @@
 	"rules": {
 		"array-bracket-newline": 0,
 		"id-length": 0,
-		"max-statements-per-line": [2, { "max": 2 }],
-		"max-statements": [2, 22],
 		"new-cap": [2, {
 			"capIsNewExceptions": [
 				"ArraySpeciesCreate",
@@ -31,7 +29,6 @@
 			"files": "test/**",
 			"rules": {
 				"max-lines-per-function": 0,
-				"max-params": 0,
 				"no-invalid-this": 1,
 				"strict": 0,
 			},
