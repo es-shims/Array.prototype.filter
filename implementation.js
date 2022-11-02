@@ -1,15 +1,15 @@
 'use strict';
 
-var ArraySpeciesCreate = require('es-abstract/2021/ArraySpeciesCreate');
-var Call = require('es-abstract/2021/Call');
-var CreateDataPropertyOrThrow = require('es-abstract/2021/CreateDataPropertyOrThrow');
-var Get = require('es-abstract/2021/Get');
-var HasProperty = require('es-abstract/2021/HasProperty');
-var IsCallable = require('es-abstract/2021/IsCallable');
-var LengthOfArrayLike = require('es-abstract/2021/LengthOfArrayLike');
-var ToBoolean = require('es-abstract/2021/ToBoolean');
-var ToObject = require('es-abstract/2021/ToObject');
-var ToString = require('es-abstract/2021/ToString');
+var ArraySpeciesCreate = require('es-abstract/2022/ArraySpeciesCreate');
+var Call = require('es-abstract/2022/Call');
+var CreateDataPropertyOrThrow = require('es-abstract/2022/CreateDataPropertyOrThrow');
+var Get = require('es-abstract/2022/Get');
+var HasProperty = require('es-abstract/2022/HasProperty');
+var IsCallable = require('es-abstract/2022/IsCallable');
+var LengthOfArrayLike = require('es-abstract/2022/LengthOfArrayLike');
+var ToBoolean = require('es-abstract/2022/ToBoolean');
+var ToObject = require('es-abstract/2022/ToObject');
+var ToString = require('es-abstract/2022/ToString');
 var callBound = require('call-bind/callBound');
 var isString = require('is-string');
 
