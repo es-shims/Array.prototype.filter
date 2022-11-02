@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.2](https://github.com/es-shims/Array.prototype.filter/compare/v1.0.1...v1.0.2) - 2022-11-02
+
+### Commits
+
+- [actions] reuse common workflows [`e6b344f`](https://github.com/es-shims/Array.prototype.filter/commit/e6b344fc6e18f8236226e4203d7b4805baa5fdf7)
+- [meta] use `npmignore` to autogenerate an npmignore file [`6e49bfb`](https://github.com/es-shims/Array.prototype.filter/commit/6e49bfb42631966bc9b1f0e7a425ef605036ac42)
+- [Deps] update `define-properties`, `es-abstract` [`302c434`](https://github.com/es-shims/Array.prototype.filter/commit/302c4343e6f45809f5829868422e238e3a57cd0c)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `es-value-fixtures`, `functions-have-names`, `globalthis`, `tape` [`da46f14`](https://github.com/es-shims/Array.prototype.filter/commit/da46f14d1264cdf948231c75caf7822736ab0128)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `@es-shims/api`, `safe-publish-latest`, `tape` [`efe3552`](https://github.com/es-shims/Array.prototype.filter/commit/efe355289a850850854c53d5af7687527be4babd)
+- [actions] update rebase action to use reusable workflow [`360c495`](https://github.com/es-shims/Array.prototype.filter/commit/360c495fe98a9edc61e54ad947928b13f4ff6cb4)
+- [actions] update codecov uploader [`ddaae91`](https://github.com/es-shims/Array.prototype.filter/commit/ddaae91dc759b66ed6d52cfffdbba103ca4b788f)
+
 ## [v1.0.1](https://github.com/es-shims/Array.prototype.filter/compare/v1.0.0...v1.0.1) - 2021-10-01
 
 ### Commits
