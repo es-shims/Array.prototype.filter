@@ -1,15 +1,15 @@
 'use strict';
 
-var ArraySpeciesCreate = require('es-abstract/2023/ArraySpeciesCreate');
-var Call = require('es-abstract/2023/Call');
-var CreateDataPropertyOrThrow = require('es-abstract/2023/CreateDataPropertyOrThrow');
-var Get = require('es-abstract/2023/Get');
-var HasProperty = require('es-abstract/2023/HasProperty');
-var IsCallable = require('es-abstract/2023/IsCallable');
-var LengthOfArrayLike = require('es-abstract/2023/LengthOfArrayLike');
-var ToBoolean = require('es-abstract/2023/ToBoolean');
+var ArraySpeciesCreate = require('es-abstract/2024/ArraySpeciesCreate');
+var Call = require('es-abstract/2024/Call');
+var CreateDataPropertyOrThrow = require('es-abstract/2024/CreateDataPropertyOrThrow');
+var Get = require('es-abstract/2024/Get');
+var HasProperty = require('es-abstract/2024/HasProperty');
+var IsCallable = require('es-abstract/2024/IsCallable');
+var LengthOfArrayLike = require('es-abstract/2024/LengthOfArrayLike');
+var ToBoolean = require('es-abstract/2024/ToBoolean');
 var ToObject = require('es-object-atoms/ToObject');
-var ToString = require('es-abstract/2023/ToString');
+var ToString = require('es-abstract/2024/ToString');
 
 var callBound = require('call-bind/callBound');
 var isString = require('is-string');
