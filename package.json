@@ -65,6 +65,7 @@
 		"define-properties": "^1.2.0",
 		"es-abstract": "^1.22.1",
 		"es-array-method-boxes-properly": "^1.0.0",
+		"es-object-atoms": "^1.0.0",
 		"is-string": "^1.0.7"
 	},
 	"auto-changelog": {

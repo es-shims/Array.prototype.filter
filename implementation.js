@@ -8,14 +8,15 @@ var HasProperty = require('es-abstract/2023/HasProperty');
 var IsCallable = require('es-abstract/2023/IsCallable');
 var LengthOfArrayLike = require('es-abstract/2023/LengthOfArrayLike');
 var ToBoolean = require('es-abstract/2023/ToBoolean');
-var ToObject = require('es-abstract/2023/ToObject');
+var ToObject = require('es-object-atoms/ToObject');
 var ToString = require('es-abstract/2023/ToString');
 
 var callBound = require('call-bind/callBound');
 var isString = require('is-string');
+var $Object = require('es-object-atoms');
 
 // Check failure of by-index access of string characters (IE < 9) and failure of `0 in boxedString` (Rhino)
-var boxedString = Object('a');
+var boxedString = $Object('a');
 var splitString = boxedString[0] !== 'a' || !(0 in boxedString);
 
 var strSplit = callBound('String.prototype.split');
